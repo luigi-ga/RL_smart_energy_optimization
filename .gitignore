@@ -164,3 +164,4 @@ cython_debug/
 sinergym/
 EnergyPlus-23-1-0/
 ActiveRL/
+data/
