@@ -12,7 +12,8 @@ class CustomModelJSON(ModelJSON):
     def apply_weather_variability(
             self,
             variation: Dict[str, np.ndarray]) -> str:
-        """Modify weather data using Ornstein-Uhlenbeck process for multiple variables.
+        """
+        Modify weather data using Ornstein-Uhlenbeck process for multiple variables.
 
         Args:
             variation (Dict[str, np.ndarray]): Maps columns to be affected to the corresponding Ornstein-Uhlenbeck process parameters.
@@ -30,7 +31,7 @@ class CustomModelJSON(ModelJSON):
         weather_data_mod = deepcopy(self.weather_data)
 
         # Apply variation to EPW if exists
-        if variation:
+        if variation and isinstance(variation, dict):
             # Get dataframe with weather series
             df = weather_data_mod.get_weather_series()
 
