@@ -1,5 +1,3 @@
-"""Implementation of custom reward"""
-
 from typing import Dict, List, Tuple, Union, Any
 from sinergym.utils.rewards import LinearReward
 

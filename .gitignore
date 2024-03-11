@@ -164,6 +164,9 @@ cython_debug/
 sinergym/
 EnergyPlus-23-1-0/
 ActiveRL/
+ActiveRL_old/
+.venv/
 data/
 ppo_agent.zip
-checkpoint/
+checkpoints/
+results/

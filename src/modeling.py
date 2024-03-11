@@ -4,10 +4,9 @@ from copy import deepcopy
 from typing import Dict
 from sinergym.config.modeling import ModelJSON
 
-
 class CustomModelJSON(ModelJSON):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)        
     
     def apply_weather_variability(
             self,
