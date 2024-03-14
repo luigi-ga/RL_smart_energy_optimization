@@ -31,7 +31,7 @@ class SinergymWrapper(gym.ObservationWrapper):
             max_ep_store=self.env.unwrapped.model.max_ep_store,
             extra_config=self.env.unwrapped.model.config,
         )       
-
+        
         # Normalize the observation space
         self.env =  NormalizeObservation(self.env)
 
@@ -43,7 +43,7 @@ class SinergymWrapper(gym.ObservationWrapper):
         return observation
 
     def reset(self, seed=None):
-        self.apply_new_weather_var()
+        #self.apply_new_weather_var()
         obs, info = self.env.reset(seed=seed)
         return obs
 
